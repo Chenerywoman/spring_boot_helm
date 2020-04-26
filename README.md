@@ -1,5 +1,7 @@
 # spring_boot_helm
 
+n.b. there are two branches - master & full end-to-end
+
 ## Make an ECR
 
 Make a ECR (Amazon Elastic Container Registry) repository using terraform:
