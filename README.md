@@ -139,7 +139,7 @@ __Add app to Jenkins__
 
 * Click on pipeline -> ok Pipeline -> Select ‘pipeline script from SCM’ , then SCM – select Git Repository url
 
-* go to GitHub & clone the https url of the spring_boot_helm app & paste the url under Description
+* go to GitHub & clone the https url of the spring_boot_helm app & paste the url 
 
 * tick ‘this project is parameterised’  & choose string parameter
 
@@ -195,6 +195,8 @@ Get the later docker image tag from the AWS Console & change in the command belo
 ## Pull down
  
 ```helm uninstall Jenkins-app```
+
 ```helm uninstall course-day-service```
+
 ```terraform destroy```
  
