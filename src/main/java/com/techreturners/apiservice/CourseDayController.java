@@ -24,15 +24,6 @@ public class CourseDayController {
     @Autowired
     protected CourseDayService courseDayService = null;
 
-<<<<<<< HEAD
-	@GetMapping("/course-day")
-    @Timed("get.course-day")
-	public CourseDay getCourseDay(@RequestParam(defaultValue = "1") String day) {
-        logger.info("getCourseDay() - START");
-        CourseDay courseDay = courseDayService.getDay(Integer.parseInt(day));
-         logger.info("getCourseDay() - END");
-        return courseDay;
-=======
     @GetMapping("/course-day")
     @Timed("get.course-day")
 	public CourseDay getCourseDay(@RequestParam(defaultValue = "1") String day) {
@@ -40,7 +31,6 @@ public class CourseDayController {
         CourseDay cd = courseDayService.getDay(Integer.parseInt(day));
         logger.info("getCourseDay() - END");
         return cd;
->>>>>>> 6358b8660e84942f0ed90de69e5013a7d113c882
 	}
 }
 

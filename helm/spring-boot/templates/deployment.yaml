@@ -10,13 +10,8 @@ spec:
     matchLabels:
       {{- include "spring-boot.selectorLabels" . | nindent 6 }}
   template:
-<<<<<<< HEAD
-      metadata:
-        annotations:
-=======
     metadata:
       annotations:
->>>>>>> 6358b8660e84942f0ed90de69e5013a7d113c882
         prometheus.io/scrape: "true"
         prometheus.io/path: /actuator/prometheus
         prometheus.io/port: "8080"
