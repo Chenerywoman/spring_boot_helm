@@ -10,7 +10,11 @@ spec:
     matchLabels:
       {{- include "spring-boot.selectorLabels" . | nindent 6 }}
   template:
-    metadata:
+      metadata:
+        annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8080"
       labels:
         {{- include "spring-boot.selectorLabels" . | nindent 8 }}
     spec:
@@ -37,7 +41,7 @@ spec:
               port: http
           readinessProbe:
             httpGet:
-              path: /course-day
+              path: actuator/health
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
