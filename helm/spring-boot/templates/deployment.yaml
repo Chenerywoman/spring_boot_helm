@@ -10,8 +10,13 @@ spec:
     matchLabels:
       {{- include "spring-boot.selectorLabels" . | nindent 6 }}
   template:
+<<<<<<< HEAD
       metadata:
         annotations:
+=======
+    metadata:
+      annotations:
+>>>>>>> 6358b8660e84942f0ed90de69e5013a7d113c882
         prometheus.io/scrape: "true"
         prometheus.io/path: /actuator/prometheus
         prometheus.io/port: "8080"
@@ -37,11 +42,15 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /course-day
+              path: /actuator/health
               port: http
           readinessProbe:
             httpGet:
+<<<<<<< HEAD
               path: actuator/health
+=======
+              path: /actuator/health
+>>>>>>> 6358b8660e84942f0ed90de69e5013a7d113c882
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
